@@ -8,7 +8,7 @@ import { each } from 'svelte/internal';
 
   async function handleQuery() {
     query = searchMovie.value
-    const response = await fetch(`https://imdb-api.com/en/API/SearchMovie/k_f3syvh7q/${query}`)
+    const response = await fetch(`https://imdb-api.com/en/API/SearchMovie/--key goes here--/${query}`)
     returnedList = await response.json()
     searchResults = returnedList.results;
     console.log(searchResults) 
